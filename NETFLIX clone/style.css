@@ -1,23 +1,36 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
-  font-family: Roboto , Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  color: white;
 }
 
-body{
+body {
+  background-color: black;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to top right, rgb(0, 0, 0), rgba(0, 0, 0, 0.723), rgba(0, 0, 0, 0.872)), url("https://www.universitymagazine.ca/wp-content/uploads/2021/08/How-to-Get-Netflix-For-Free.jpg") center center/cover no-repeat;
+  /* border-bottom: 3px solid;
+  border-bottom-color: red; */
+  background-attachment: fixed;
+  position: relative;
+}
+
+.radical-gradient {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  border-radius: 60% 60%;
+  border-top: 3px solid red;
+  height: 15vh;
   background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
 }
 
-.container{
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to top right , rgb(0, 0, 0), rgba(0, 0, 0, 0.723), rgba(0, 0, 0, 0.872)), url("https://www.universitymagazine.ca/wp-content/uploads/2021/08/How-to-Get-Netflix-For-Free.jpg") center center/cover;
-  border-bottom: 3px solid;
-  border-bottom-color: red;
-}
-
-.navbar-container{
+.navbar-container {
   display: flex;
   justify-content: space-between;
   padding: 25px 140px;
@@ -26,14 +39,14 @@ body{
   color: white;
 }
 
-.nav-logo{
+.nav-logo {
   width: 150px;
   height: 200px;
   margin-top: -75px;
   filter: contrast(200);
 }
 
-.heading-container{
+.heading-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +55,7 @@ body{
   color: white;
 }
 
-h1{
+.heading-container>h1 {
   line-height: 70px;
   font-size: 3.5rem;
   font-weight: 900;
@@ -51,7 +64,7 @@ h1{
   /* color: white; */
 }
 
-h3{
+.heading-container>h3 {
   margin-top: 15px;
   margin-bottom: 30px;
   font-size: 1.25rem;
@@ -59,14 +72,14 @@ h3{
   /* color: white; */
 }
 
-p{
+.heading-container>p {
   margin-bottom: 10px;
   font-size: 1rem;
   font-weight: 400;
   /* color: white; */
 }
 
-.lang{
+.lang {
   color: white;
   background-color: rgba(0, 0, 0, 0.175);
   height: 33px;
@@ -75,19 +88,20 @@ p{
   padding-right: 12px;
   border-radius: 5px;
   font-size: 15px;
+  vertical-align: top;
 }
 
-option{
+option {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
 }
 
-.nav-buttons{
+.nav-buttons,
+.footer-buttons {
   position: relative;
-  /* padding-top: 10px; */
 }
 
-.translate-logo{
+.translate-logo {
   height: 16px;
   position: absolute;
   top: 9px;
@@ -95,8 +109,8 @@ option{
   filter: invert(1);
 }
 
-.btn-sign-in{
-  height: 33px;
+.btn-sign-in {
+  height: 32px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
@@ -105,9 +119,10 @@ option{
   color: white;
   width: 85px;
   padding-top: 3px;
+  cursor: pointer;
 }
 
-.email-input{
+.email-input {
   width: 350px;
   height: 51px;
   border: 1px solid rgba(143, 151, 160, 0.62);
@@ -118,12 +133,12 @@ option{
   font-weight: 500;
 }
 
-.email-input::placeholder{
+.email-input::placeholder {
   font-size: 16px;
   color: rgb(159, 161, 162);
 }
 
-.btn-start{
+.btn-start {
   width: 200px;
   height: 52px;
   background-color: red;
@@ -131,8 +146,218 @@ option{
   font-size: 22px;
   border: none;
   font-weight: bolder;
+  cursor: pointer;
 }
 
-/* .input-container{
+.content-container {
+  padding: 0px 140px;
+  margin-bottom: 55px;
+}
+
+.trending,
+.more-reasons-to-join,
+.queries-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.region {
+  color: white;
+  background-color: #2a29297b;
+  padding: 8px 9px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-right: 20px;
+  outline: none;
+}
+
+.genre {
+  color: white;
+  background-color: #2a29297b;
+  padding: 8px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.content {
+  margin-top: 24px;
+  display: flex;
+  overflow: hidden;
+  padding-left: 1.375rem;
+  margin-bottom: 70px;
+}
+
+.movie-card {
+  margin-right: 2.85rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.movie-card>img {
+  border-radius: 7px;
+  width: 180px;
+  height: 250px;
+}
+
+.rank {
+  font-family: sans-serif;
+  font-size: 100px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  text-shadow:
+    1.5px 1.5px white,
+    1.5px -1.5px white,
+    -1.5px 1.5px white,
+    -1.5px -1.5px white;
+  position: absolute;
+  z-index: 5;
+  bottom: 7px;
+  left: -22px;
+}
+
+.reason-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 24%;
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  box-sizing: border-box;
+  padding: 30px 20px;
+  padding-bottom: 20px;
+  height: 285px;
+  border-radius: 15px;
+}
+
+.card>p {
+  margin-top: 20px;
+}
+
+.query {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.que,
+.ans {
+  background-color: rgba(152, 152, 152, 0.277);
+  font-size: 23px;
+  padding: 30px 25px;
+  margin-bottom: 1px;
+}
+
+.ans {
+  /* position: absolute;
+  opacity: 0;
+  bottom: 0; */
+  display: none;
+}
+
+/* .query .ans{
+  transition: all 1s ease;
+  } */
+
+/* .query:hover .ans{
+    opacity: 1;
+    top: 0;
+    position: static;
+    } */
+
+.query span {
+  transition: all 0.5s ease;
+}
+
+.query:hover span {
+  transform: rotate(45deg);
+}
+
+.query>span {
+  font-size: 60px;
+  font-weight: 200;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.content-container-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.content-container-footer-para {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer-email-input {
+  width: 550px;
+  height: 51px;
+  border: 1px solid rgba(143, 151, 160, 0.62);
+  border-radius: 4px;
+  padding-left: 15px;
   vertical-align: top;
-} */
+  background-color: rgba(55, 54, 54, 0.302);
+  font-weight: 400;
+}
+
+.footer-email-input::placeholder {
+  font-size: 16px;
+  color: rgb(159, 161, 162);
+}
+
+.footer {
+  padding: 0px 140px;
+  font-size: 14px;
+  color: rgba(214, 209, 209, 0.686);
+}
+
+.helpline {
+  color: inherit;
+}
+
+.helpline>span {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navigations {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 55px;
+}
+
+.box {
+  width: 25%;
+  line-height: 35px;
+}
+
+.box>p>span {
+  color: rgba(214, 209, 209, 0.686);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.final-line {
+  color: inherit;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+select {
+  cursor: pointer;
+}
