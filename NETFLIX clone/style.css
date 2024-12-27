@@ -234,14 +234,26 @@ option {
   width: 24%;
   background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
   box-sizing: border-box;
-  padding: 30px 20px;
-  padding-bottom: 20px;
-  height: 285px;
+  padding: 30px 20px 20px 20px;
   border-radius: 15px;
+  overflow: hidden;
+  height: 115px;
+  transition: all 0.5s;
 }
 
 .card>p {
   margin-top: 20px;
+  margin-bottom: 40px;
+  transform: translateY(300%);
+  transition: all 0.5s;
+}
+
+.card:hover{
+  height: 285px;
+}
+
+.card:hover p{
+  transform: translateY(0%);
 }
 
 .query {
