@@ -22,12 +22,13 @@ body {
 
 .radical-gradient {
   position: absolute;
-  bottom: -50px;
-  width: 100%;
-  border-radius: 60% 60%;
+  bottom: -60px;
+  width: 120%;
+  border-radius: 55% 65%;
   border-top: 3px solid red;
   height: 15vh;
   background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+  left: -115px;
 }
 
 .navbar-container {
@@ -152,6 +153,7 @@ option {
 .content-container {
   padding: 0px 140px;
   margin-bottom: 55px;
+  margin-top: 55px;
 }
 
 .trending,
@@ -244,6 +246,7 @@ option {
 .query {
   margin-bottom: 8px;
   position: relative;
+  transition: all 0.5s;
 }
 
 .que,
@@ -273,6 +276,10 @@ option {
 
 .query span {
   transition: all 0.5s ease;
+}
+
+.query:hover{
+  background-color: rgba(152, 152, 152, 0.597);
 }
 
 .query:hover span {
