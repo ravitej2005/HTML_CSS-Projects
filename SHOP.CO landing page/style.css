@@ -85,7 +85,7 @@ a {
 .context {
   display: flex;
   flex-direction: column;
-  width: 46%;
+  width: 48%;
   z-index: 2;
   gap: 15px;
 }
