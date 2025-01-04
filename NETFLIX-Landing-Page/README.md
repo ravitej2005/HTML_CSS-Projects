@@ -1,5 +1,6 @@
-# NETFLIX Clone
+# NETFLIX Landing Page
 
-Netflix Clone Using HTML & CSS Only For Practice Purpose
+A simple landing page inspired by Netflix's design.
 
-Live preview [here](https://tiny-crisp-b6f741.netlify.app/)
+## Live Demo
+[NETFLIX Landing Page](https://ravitej2005.github.io/HTML_CSS-Projects/NETFLIX-Landing-Page/)
