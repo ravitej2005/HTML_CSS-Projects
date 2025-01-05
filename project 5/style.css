@@ -181,6 +181,7 @@ body{
 .frame1{
   position: absolute;
   top: 5px;
+  z-index: 1;
 }
 
 .card{
@@ -192,14 +193,43 @@ body{
   padding: 45px 0px 45px 45px; 
   /* flex-grow: 1; */
   width: 17%;
+  background-color: white;
+  color: black;
   box-shadow: 
   10px 20px 25px 0px rgba(0, 0, 0, 0.050),
   -10px 20px 25px 0px rgba(0, 0, 0, 0.050);
+  transition: all 0.5s;
+}
+
+.card:hover .frame1{
+  filter: invert(1);
+}
+
+.card:hover .frame2{
+  filter: invert(1) brightness(5) opacity(0.8);
+}
+.card:hover .adjust{
+  filter: invert(0) brightness(5) opacity(0.8);
+}
+  
+
+.card:hover{
+  background-color: #96BB7C;
+  color: white;
+}
+
+.card:hover .border-line{
+  border-color: white;
+}
+
+.card:hover>p{
+  color: white;
 }
 
 .border-line{
   border: 2px solid #E74040;
   width: 23%;
+  transition: all 0.5s;
 }
 
 .card>h3{
@@ -211,6 +241,7 @@ body{
   color: #737373;
   font-weight: 600;
   width: 70%;
+  transition: all 0.5s;
 }
 
 .adjust{
